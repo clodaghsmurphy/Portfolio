@@ -1,0 +1,25 @@
+@import "variables";
+
+body {
+	background-color: $bg-color;
+
+    .social-icons {
+            list-style: none;
+            position: fixed;
+            width: 10%;
+            left  : 0;
+            top: 50%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+    
+            li {
+                margin: 10px;
+            }
+    
+            img {
+                cursor: pointer;
+            }
+        }
+}
+
