@@ -1,8 +1,11 @@
 @import "variables";
 
+* {
+    overflow-x: hidden;
+}
+
 body {
 	background-color: $bg-color;
-
     .social-icons {
             list-style: none;
             position: fixed;

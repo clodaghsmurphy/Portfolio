@@ -1,40 +1,143 @@
-.home-container {
-	display: flex;
-    margin-left: auto;
-    margin-right: auto;
+@import "variables";
+
+.home-section {
     height: 100vh;
-    width: 80%;
-	.left-column {
-		flex: 60%;
+    .home-container {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 10px;
-        .description {
-            height: 50%;
-            h1 {
-                font-size: 50px;
-            }    
-        }
-	}
-    .right-column {
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        font-family: sans-serif;
+        height: 100vh;
+        width: 80%;
         position: relative;
-        .avatar {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 10;
+        z-index: 10;
+        @media screen and (max-width: $screen-width-sm){
+            flex-direction: column;
+        }
+        .left-column {
+            flex: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            color: $font-color;
+            .description {
+                h1 {
+                    font-size: 50px;
+                    font-family: sans-serif;
+                span {
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: thin $font-color;
+                }
+                }
+                p {
+                    font-size: 24px;
+                }   
+                .cta {
+                    color: white;
+                    font-family: sans-serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    border: none;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    background: rgb(147, 199, 241);
+                    background: linear-gradient(90deg, rgba(147, 199, 241, 1) 7%, rgba(139, 240, 225, 0.61390493697479) 100%);
+                    &:hover {
+                        background: rgb(147, 199, 241);
+                        background: linear-gradient(90deg, rgba(147, 199, 241, 1) 7%, rgba(139, 240, 225, 1) 100%);
+                        transform: scale(1.01);
+                    }
+                } 
+            }
+        }
+        .right-column {
+            overflow: visible;
             position: relative;
+            .avatar-container {
+                overflow: hidden;
+                .avatar {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 10;
+                    position: relative;
+                }
+            }
+            
         }
-        .pink-ball {
-            z-index: 2;
-            position: absolute;
+    }
+    .blue-ball {
+        z-index: 1;
+        top: 50px;
+        right: 5%;
+        transform: translate(50%, -50%);
+        position: absolute;
+    }
+    .pink-ball {
+        z-index: 0;
+        top: 250px;
+        right: 25%;
+        transform: translate(50%, -50%);
+        position: absolute;
+    }
+   
+    .bg-blur{
+        z-index: 0;
+        position: absolute;
+        filter: blur(150px);
+        top: 0;
+        height: 80%;
+        opacity: 0.5;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+.skills-section {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: lighten($blue, 20%);
+    .blue-ball {
+        z-index: 2;
+        filter: blur(100px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+    }
+
+    .card-container {
+        display: flex;
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        flex-direction: row;
+        @media screen and (max-width: $screen-width-sm){
+            flex-direction: column;
         }
-        .blue-ball {
-            z-index: 2;
-            position: absolute;
-            left: 50%;
-            top: -20%;
+       margin: auto;
+       justify-content: space-between;
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: $blue;
+            border-radius: 10px;
+            padding: 20px;
+            height: auto;
+           flex: 30%;
+            margin: 10px;
         }
     }
 }

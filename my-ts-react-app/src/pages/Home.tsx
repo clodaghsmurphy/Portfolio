@@ -2,26 +2,43 @@ import "../css/Home.css";
 import avatar from "../media/avatar.png"
 import pinkBall from "../media/pink-ball.svg";
 import blueBall from "../media/blue-ball.svg";
+import TypeWriter from "../utils/TypeWriter";
+import FadeIn from "react-fade-in";
 
+const TypeWriterConfigs = {
+    strings : ['Developer', 'Designer', 'Dog lover'],
+    speed : 100
+}
 
 function Home() {
-	  return (
+    const observer = new IntersectionObserver((entries) => {
+        console.log('here');
+        entries.forEach(entry => {
+            console.log(entry);
+        });
+    });
+    observer.observe(document.querySelector('.home-section'));
+	return (
     <div className="home-section">
         <div className="home-container">
             <div className="left-column">
-               
                 <div className="description">
-                    <h1>Full stack developer</h1>
+                    <h1>I'm a <TypeWriter {...TypeWriterConfigs} /></h1>
+                    <p>Hi I'm Clodagh ! I'm a fullstack developer based in Paris.
+                        I'm passionate about using effective design and problem soliving to create 
+                        user-friendly experiences</p>
+                    <button className="cta">Download CV</button>
                 </div>
             </div>
             <div className="right-column">
-                <img src={pinkBall} alt="pink-ball" className="pink-ball" />
-                <img src={blueBall} alt="blue-ball" className="blue-ball" />
-                <div className="avatar-container">
-                    <img src={avatar}	alt="avatar" className="avatar"/>
-                </div>
+                    <div className="avatar-container">
+                        <img src={avatar}	alt="avatar" className="avatar"/>
+                    </div>
             </div>
         </div>
+            <img className="blue-ball" src={blueBall} alt="blue-ball" />
+            <img className="pink-ball" src={pinkBall} alt="pink-ball" />
+            <img src={pinkBall} alt="bg-blur" className="bg-blur" />
     </div>
   );
 }
