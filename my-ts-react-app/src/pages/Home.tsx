@@ -4,6 +4,7 @@ import pinkBall from "../media/pink-ball.svg";
 import blueBall from "../media/blue-ball.svg";
 import TypeWriter from "../utils/TypeWriter";
 import FadeIn from "react-fade-in";
+import { motion } from "framer-motion"
 
 const TypeWriterConfigs = {
     strings : ['Developer', 'Designer', 'Dog lover'],
@@ -11,13 +12,20 @@ const TypeWriterConfigs = {
 }
 
 function Home() {
-    const observer = new IntersectionObserver((entries) => {
-        console.log('here');
-        entries.forEach(entry => {
-            console.log(entry);
-        });
-    });
-    observer.observe(document.querySelector('.home-section'));
+    const { scrollYProgress } = useViewportScroll()
+    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
+    return (
+        <motion.div
+            style={{ scale }}
+        >
+            <motion.div
+                style={{
+                    scaleY: scrollYProgress
+                }}
+            />
+        </motion.div>
+    )
 	return (
     <div className="home-section">
         <div className="home-container">
