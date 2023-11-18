@@ -3,8 +3,7 @@ import avatar from "../media/avatar.png"
 import pinkBall from "../media/pink-ball.svg";
 import blueBall from "../media/blue-ball.svg";
 import TypeWriter from "../utils/TypeWriter";
-import FadeIn from "react-fade-in";
-import { motion } from "framer-motion"
+
 
 const TypeWriterConfigs = {
     strings : ['Developer', 'Designer', 'Dog lover'],
