@@ -1,8 +1,13 @@
 import "../css/Home.css";
 import avatar from "../media/avatar.png"
 import pinkBall from "../media/pink-ball.svg";
+import { useLayoutEffect, useRef } from "react";
 import blueBall from "../media/blue-ball.svg";
 import TypeWriter from "../utils/TypeWriter";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 
 
 const TypeWriterConfigs = {
@@ -25,6 +30,35 @@ function Home() {
     //         />
     //     </motion.div>
     // )
+    gsap.registerPlugin(ScrollTrigger);
+    const myRef = useRef<HTMLImageElement | null>(null);
+
+    useLayoutEffect(() => {
+       const pinkBall = myRef.current;
+
+        const initialY = pinkBall?.getBoundingClientRect()?.top;
+        console.log(initialY);
+       const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: pinkBall,
+                start: "center center",
+                end: "bottom center",
+                markers: true,
+                scrub: true,
+            },
+        });
+        tl.to(pinkBall, {
+            top: '-200px',
+           
+          })
+          .to(pinkBall, {
+              x: '-10%',
+          })
+          .to(pinkBall, {
+            scale: 1.5,
+            duration: 1,
+        })
+    })
 	return (
     <div className="home-section">
         <div className="home-container">
@@ -44,7 +78,7 @@ function Home() {
             </div>
         </div>
             <img className="blue-ball" src={blueBall} alt="blue-ball" />
-            <img className="pink-ball" src={pinkBall} alt="pink-ball" />
+            <img className="pink-ball" src={pinkBall} ref={myRef} alt="pink-ball" />
             <img src={pinkBall} alt="bg-blur" className="bg-blur" />
     </div>
   );
