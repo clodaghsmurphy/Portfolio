@@ -42,8 +42,7 @@ function Home() {
             scrollTrigger: {
                 trigger: pinkBall,
                 start: "center center",
-                end: "bottom center",
-                markers: true,
+                end: "bottom top",
                 scrub: true,
             },
         });
