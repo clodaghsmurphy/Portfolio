@@ -7,57 +7,53 @@ import TypeWriter from "../utils/TypeWriter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
-
-
 const TypeWriterConfigs = {
     strings : ['Developer', 'Designer', 'Dog lover'],
     speed : 100
 }
 
 function Home() {
-    // const { scrollYProgress } = useViewportScroll()
-    // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
-
-    // return (
-    //     <motion.div
-    //         style={{ scale }}
-    //     >
-    //         <motion.div
-    //             style={{
-    //                 scaleY: scrollYProgress
-    //             }}
-    //         />
-    //     </motion.div>
-    // )
     gsap.registerPlugin(ScrollTrigger);
-    const myRef = useRef<HTMLImageElement | null>(null);
+    const pinkRef = useRef<HTMLImageElement | null>(null);
+    const blueRef = useRef<HTMLImageElement | null>(null);
 
     useLayoutEffect(() => {
-       const pinkBall = myRef.current;
+       const pinkBall = pinkRef.current;
+       const blueBall = blueRef.current;
 
-        const initialY = pinkBall?.getBoundingClientRect()?.top;
-        console.log(initialY);
        const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: pinkBall,
-                start: "center center",
+                markers: true,
+                start: "40% center",
                 end: "bottom top",
                 scrub: true,
             },
         });
         tl.to(pinkBall, {
-            top: '-200px',
-           
-          })
-          .to(pinkBall, {
-              x: '-10%',
+            top: '0px',
+            transform: 'translateY(-70%)',
           })
           .to(pinkBall, {
             scale: 1.5,
             duration: 1,
         })
-    })
+
+        const tl2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: blueBall,
+                start: "center center",
+                end: "bottom top",
+                scrub: true,
+            },
+            });
+            tl2.to(blueBall, {
+                bottom: '0px',
+                left: '50%',
+                transform: 'translate(-50%, 30%)',
+            })
+        });
+
 	return (
     <div className="home-section">
         <div className="home-container">
@@ -76,8 +72,8 @@ function Home() {
                     </div>
             </div>
         </div>
-            <img className="blue-ball" src={blueBall} alt="blue-ball" />
-            <img className="pink-ball" src={pinkBall} ref={myRef} alt="pink-ball" />
+            <img className="blue-ball" src={blueBall} ref={blueRef} alt="blue-ball" />
+            <img className="pink-ball" src={pinkBall} ref={pinkRef} alt="pink-ball" />
             <img src={pinkBall} alt="bg-blur" className="bg-blur" />
     </div>
   );

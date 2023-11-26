@@ -15,8 +15,7 @@
     overflow: hidden; }
     @media screen and (max-width: 771px) {
       .home-section .home-container {
-        flex-direction: column;
-        height: 50vh; } }
+        flex-direction: column; } }
     .home-section .home-container .left-column {
       height: 50vh;
       flex: 70%;
@@ -24,7 +23,8 @@
       align-items: center;
       justify-content: space-between;
       margin: 10px;
-      color: #818183; }
+      color: #818183;
+      overflow: visible; }
       .home-section .home-container .left-column .description {
         z-index: 20; }
         .home-section .home-container .left-column .description h1 {
@@ -52,6 +52,13 @@
             background: #93c7f1;
             background: linear-gradient(90deg, #93c7f1 7%, #8bf0e1 100%);
             transform: scale(1.01); }
+        @media screen and (max-width: 771px) {
+          .home-section .home-container .left-column .description h1 {
+            font-size: 30px; }
+          .home-section .home-container .left-column .description p {
+            font-size: 18px; }
+          .home-section .home-container .left-column .description .cta {
+            font-size: 16px; } }
     .home-section .home-container .right-column {
       height: 50vh;
       display: flex;
@@ -59,6 +66,9 @@
       justify-content: center;
       overflow: visible;
       position: relative; }
+      @media screen and (max-width: 771px) {
+        .home-section .home-container .right-column {
+          display: none; } }
       .home-section .home-container .right-column .avatar-container {
         overflow: hidden; }
         .home-section .home-container .right-column .avatar-container .avatar {
@@ -68,17 +78,24 @@
           z-index: 20;
           position: relative; }
   .home-section .blue-ball {
-    z-index: 8;
+    z-index: 0;
     top: 45%;
     right: 5%;
     transform: translate(50%, -50%);
-    position: absolute; }
+    position: fixed; }
+    @media screen and (max-width: 771px) {
+      .home-section .blue-ball {
+        display: none; } }
   .home-section .pink-ball {
-    z-index: 9;
+    z-index: 1;
     top: 50%;
     right: 25%;
     transform: translate(50%, -50%);
     position: fixed; }
+    @media screen and (max-width: 771px) {
+      .home-section .pink-ball {
+        top: 0%;
+        width: 70%; } }
   .home-section .bg-blur {
     z-index: 0;
     position: absolute;
@@ -90,40 +107,74 @@
     transform: translate(-50%, 50%); }
 
 .skills-section {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #edf6fd; }
+  z-index: 2; }
+  .skills-section h1 {
+    color: #fff;
+    font-size: 2.5em; }
   .skills-section .blue-ball {
-    z-index: 2;
+    z-index: 1;
     filter: blur(100px);
     position: absolute;
+    width: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.3; }
   .skills-section .card-container {
     display: flex;
+    z-index: 2;
     width: 80%;
     height: 80%;
-    margin: auto;
     flex-direction: row;
-    margin: auto;
-    justify-content: space-between; }
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0px; }
     @media screen and (max-width: 771px) {
       .skills-section .card-container {
         flex-direction: column; } }
+    .skills-section .card-container h2 {
+      margin: 10px; }
     .skills-section .card-container .card {
       display: flex;
+      z-index: 30;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       background: #fff;
       border-radius: 10px;
       padding: 20px;
-      height: auto;
+      height: 350px;
       flex: 30%;
+      overflow: visible;
       margin: 10px; }
+      .skills-section .card-container .card .icon-header img {
+        height: 40px; }
+      .skills-section .card-container .card ul {
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .skills-section .card-container .card ul li {
+          overflow: visible;
+          margin: 8px;
+          display: flex;
+          flex-direction: row;
+          font-size: 20px; }
+          .skills-section .card-container .card ul li img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px; }
+          .skills-section .card-container .card ul li .logo-html {
+            width: 20px;
+            height: 20px;
+            background: url("../media/html.svg"); }
