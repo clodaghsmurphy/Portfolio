@@ -21,40 +21,62 @@ function Home() {
        const pinkBall = pinkRef.current;
        const blueBall = blueRef.current;
 
+       const tlHome = gsap.timeline({
+           scrollTrigger: {
+               trigger: '.home-section',
+               start: "90% center",
+               end: "bottom 30%",
+               scrub: true,
+           },
+         });
+         tlHome.to('.home-section', {
+                opacity: 0,
+            })
        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: pinkBall,
-                markers: true,
-                start: "40% center",
-                end: "bottom top",
-                scrub: true,
-            },
-        });
+        scrollTrigger: {
+            trigger: pinkBall,
+            start: "center center",
+            end: "bottom top",
+            scrub: true,
+        },
+       });
         tl.to(pinkBall, {
             top: '0px',
-            transform: 'translateY(-70%)',
+            duration: 5,
           })
           .to(pinkBall, {
-            scale: 1.5,
-            duration: 1,
-        })
+            right: '50%',
+            duration: 3,
+            })
+          .to(pinkBall, {
+            scale: 1.3,
+            duration: 3,
+            })
 
         const tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: blueBall,
-                start: "center center",
-                end: "bottom top",
+                start: "90% center",
+                end: "center top",
                 scrub: true,
             },
-            });
-            tl2.to(blueBall, {
-                bottom: '0px',
-                left: '50%',
-                transform: 'translate(-50%, 30%)',
-            })
         });
+        tl2.to(blueBall, {
+            top: '130%',
+            duration: 5,
+        })
+        .to(blueBall, {
+            right: '50%',
+            duration: 3,
+        })
+        .to(blueBall, {
+            scale: 1.1,
+            duration: 3,
+            })
+    });
 
 	return (
+        <div>
     <div className="home-section">
         <div className="home-container">
             <div className="left-column">
@@ -72,9 +94,11 @@ function Home() {
                     </div>
             </div>
         </div>
-            <img className="blue-ball" src={blueBall} ref={blueRef} alt="blue-ball" />
-            <img className="pink-ball" src={pinkBall} ref={pinkRef} alt="pink-ball" />
+            
             <img src={pinkBall} alt="bg-blur" className="bg-blur" />
+    </div>
+    <img className="blue-ball" src={blueBall} ref={blueRef} alt="blue-ball" />
+    <img className="pink-ball" src={pinkBall} ref={pinkRef} alt="pink-ball" />
     </div>
   );
 }

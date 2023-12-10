@@ -23,10 +23,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Skill() {
     const skillsList = useRef<HTMLUListElement | null>(null);
     useLayoutEffect(() => {
-    const anim = gsap.fromTo('.skills-section', { autoAlpha: 0, y: 50 }, { duration: 1, autoAlpha: 1, y: 0 });
+   const anim = gsap.fromTo('.skills-section', { autoAlpha: 0, y: 50 }, { duration: 1, autoAlpha: 1, y: 0 });
     ScrollTrigger.create({
         trigger: '.skills-section',
-        start: '30% bottom',
+        start: '50% bottom',
         end: 'center 30%',
         animation: anim,
         scrub: true,
