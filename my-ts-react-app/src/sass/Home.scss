@@ -1,9 +1,20 @@
 @import "variables";
 
+[class$="-section"] {
+    width: 90%;
+    margin: auto;
+    @media only screen and (max-width: $screen-width-xs) {
+        width: 100%;
+    }
+}
+
 .home-section {
     height: 100vh;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
     .home-container {
+        width: 80%;
         display: flex;
         align-items: center;
         overflow: hidden;
@@ -12,7 +23,6 @@
         flex-direction: row;
         font-family: sans-serif;
         height: 100vh;
-        width: 80%;
         position: fixed;
         transform: translate(-50%, -50%);
         top: 50%;
@@ -106,7 +116,7 @@
    
     .bg-blur{
         z-index: 0;
-        position: absolute;
+        position: fixed;
         filter: blur(150px);
         top: 0;
         height: 80%;
@@ -120,7 +130,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +143,84 @@
     .blue-ball {
         z-index: 1;
         filter: blur(100px);
+        position: fixed;
+        width: 400px;
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+    }
+
+    .card-container {
+        display: flex;
+        z-index: 2;
+        height: 80vh;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+        @media screen and (max-width: $screen-width-sm){
+            flex-direction: column;
+            height: unset;
+            overflow: visible;
+        }
+       justify-content: space-between;
+       padding: 0px;
+       h2 {
+        margin: 10px;
+       }
+        .card {
+            .icon-header{
+                img {
+                    height: 40px;
+                }
+            }
+            ul {
+                padding: 0px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li {
+                    overflow: visible;
+                    margin: 8px;
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 20px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                    .logo-html {
+                        width: 20px;
+                        height: 20px;
+                        background: url('../media/html.svg');
+                    }
+                }
+            }
+            display: flex;
+            z-index: 30;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            height: 350px;
+           flex: 30%;
+           @media screen and (max-width: $screen-width-xs){
+            width: 100%;
+           }
+           overflow: visible;
+            margin: 10px;
+        }
+    }
+}
+
+
+    .blue-ball {
+        z-index: 1;
+        filter: blur(100px);
         position: absolute;
         width: 400px;
         top: 50%;
@@ -140,7 +228,6 @@
         transform: translate(-50%, -50%);
         opacity: 0.3;
     }
-
     .card-container {
         display: flex;
         z-index: 2;
@@ -201,29 +288,54 @@
             margin: 10px;
         }
     }
-}
 
-  .blue-ball {
-      z-index: 0;
-      top: 45%;
-      right: 5%;
+  .blue-ball-home {
+      z-index: 1;
+      top: 50%;
+      right: 20%;
       transform: translate(50%, -50%);
       position: fixed;
-
+      max-width: 600px;
       @media screen and (max-width: $screen-width-sm) {
           display: none;
       }
   }
 
-  .pink-ball {
+  .pink-ball-home {
       z-index: 1;
       top: 50%;
-      right: 25%;
+      right: 0%;
       transform: translate(50%, -50%);
       position: fixed;
-
+        max-width: 600px;
       @media screen and (max-width: $screen-width-sm) {
           top: 0%;
           width: 70%;
       }
+  }
+
+  .about-section {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+        .about-container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                color: #fff;
+                font-size: 2.5em;
+            }
+        }
   }

@@ -1,5 +1,6 @@
 import "../css/Home.css";
-import avatar from "../media/avatar.png"
+import avatar from "../media/avatar.png";
+import React from "react";
 import pinkBall from "../media/pink-ball.svg";
 import { useLayoutEffect, useRef } from "react";
 import blueBall from "../media/blue-ball.svg";
@@ -24,8 +25,8 @@ function Home() {
        const tlHome = gsap.timeline({
            scrollTrigger: {
                trigger: '.home-section',
-               start: "90% center",
-               end: "bottom 30%",
+               start: "top top",
+               end: "+=500",
                scrub: true,
            },
          });
@@ -35,7 +36,7 @@ function Home() {
        const tl = gsap.timeline({
         scrollTrigger: {
             trigger: pinkBall,
-            start: "center center",
+            start: "top top",
             end: "bottom top",
             scrub: true,
         },
@@ -52,12 +53,13 @@ function Home() {
             scale: 1.3,
             duration: 3,
             })
+          
 
         const tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: blueBall,
-                start: "90% center",
-                end: "center top",
+                start: "180vh 0px",
+                end: "bottom top",
                 scrub: true,
             },
         });
@@ -73,6 +75,8 @@ function Home() {
             scale: 1.1,
             duration: 3,
             })
+
+        
     });
 
 	return (
@@ -97,8 +101,8 @@ function Home() {
             
             <img src={pinkBall} alt="bg-blur" className="bg-blur" />
     </div>
-    <img className="blue-ball" src={blueBall} ref={blueRef} alt="blue-ball" />
-    <img className="pink-ball" src={pinkBall} ref={pinkRef} alt="pink-ball" />
+    <img className="blue-ball-home" src={blueBall} ref={blueRef} alt="blue-ball-home" />
+    <img className="pink-ball-home" src={pinkBall} ref={pinkRef} alt="pink-ball-home" />
     </div>
   );
 }

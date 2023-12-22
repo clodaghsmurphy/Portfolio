@@ -12,6 +12,11 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column; }
+    @media screen and (max-width: 576px) {
+      body .social-icons {
+        flex-direction: row;
+        width: 100%;
+        top: 0%; } }
     body .social-icons li {
       margin: 10px; }
     body .social-icons img {
