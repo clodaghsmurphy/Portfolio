@@ -139,7 +139,7 @@
         overflow: visible; } }
     .skills-section .card-container h2 {
       margin: 10px; }
-    .skills-section .card-container .card {
+    .skills-section .card-container [class^="card-"] {
       display: flex;
       z-index: 30;
       flex-direction: column;
@@ -151,30 +151,40 @@
       flex: 30%;
       overflow: visible;
       margin: 10px; }
-      .skills-section .card-container .card .icon-header img {
+      .skills-section .card-container [class^="card-"] .icon-header img {
         height: 40px; }
-      .skills-section .card-container .card ul {
+      .skills-section .card-container [class^="card-"] .logo {
+        max-height: 25px;
+        max-width: 25px; }
+      .skills-section .card-container [class^="card-"] li {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: .5rem 0; }
+        .skills-section .card-container [class^="card-"] li img {
+          margin-right: 1rem; }
+      .skills-section .card-container [class^="card-"] ul {
         padding: 0px;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
-        .skills-section .card-container .card ul li {
+        .skills-section .card-container [class^="card-"] ul li {
           overflow: visible;
           margin: 8px;
           display: flex;
           flex-direction: row;
           font-size: 20px; }
-          .skills-section .card-container .card ul li img {
+          .skills-section .card-container [class^="card-"] ul li img {
             width: 20px;
             height: 20px;
             margin-right: 10px; }
-          .skills-section .card-container .card ul li .logo-html {
+          .skills-section .card-container [class^="card-"] ul li .logo-html {
             width: 20px;
             height: 20px;
             background: url("../media/html.svg"); }
       @media screen and (max-width: 576px) {
-        .skills-section .card-container .card {
+        .skills-section .card-container [class^="card-"] {
           width: 100%; } }
 
 .blue-ball {

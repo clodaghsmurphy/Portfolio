@@ -6,37 +6,68 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function About() {
    
     useLayoutEffect(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.about-section',
-                start: "top top",
-                end: '+=100%',
-                pin: true,
-                pinSpacing: true,
-                markers: true,
-                scrub: true,
-            },
-        });
-        tl.from('.about-section', {
-            opacity: 0,duration:1,
-            y:50
-        })
-        .to('.about-section', {
-            opacity: 1,
-            duration: 5,
-            y:0
-            }).
-            to('.about-section', {
-                opacity: 0,
-                duration: 1,
-                y:50
-            })
+        gsap.fromTo('.about-container', {
+        autoAlpha: 0
+      }, {
+        duration: 1, 
+        autoAlpha: 1,
+        ease: 'none',
+        scrollTrigger: {
+          id: `.about-section`,
+          trigger: '.about-container',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+        // const anim = gsap.fromTo('.about-container', {
+        //     opacity: 0,
+        //     yPercent: 50
+        // }, {
+        //     yPercent: -50,
+        //     opacity: 1,
+        //     duration: 1,
+        // });
+        // ScrollTrigger.create({
+        //     trigger : '.about-section', 
+        //     animation: anim
+        //  } )
+        // const tl = gsap.timeline({
+        //     defaults: {
+        //         ease: 'power1.inOut',
+        //         duration: 1,
+        //         transformOrigin: '0 0'
+        //     },
+        //     scrollTrigger: {
+        //         trigger: '.about-section',
+        //         start: "top top",
+        //         end: "+=2000", 
+        //         pin: true,
+        //         anticipatePin: 1,
+        //         pinSpacing:true,                
+        //         markers: true,
+        //         scrub: true,
+        //     },
+        // });
+        // tl.from('.about-section', {
+        //     opacity: 0,duration:1,
+        //     y:50
+        // })
+        // .to('.about-section', {
+        //     opacity: 1,
+        //     duration: 5,
+        //     y:0
+        //     })
+            // to('.about-section', {
+            //     opacity: 0,
+            //     duration: 1,
+            //     y:50
+            // })
 
         
-    });
+     });
 
   return (
-    <div className="about-section">
+    <div className="about-section" id="about-section">
         <div className="about-container">
         <h1>About</h1>
         <p>

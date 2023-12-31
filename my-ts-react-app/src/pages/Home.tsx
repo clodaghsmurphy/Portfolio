@@ -26,7 +26,7 @@ function Home() {
            scrollTrigger: {
                trigger: '.home-section',
                start: "top top",
-               end: "+=500",
+               end: `{+=${window.innerHeight}}`,
                scrub: true,
            },
          });
