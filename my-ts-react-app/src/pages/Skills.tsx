@@ -24,45 +24,39 @@ function Skill() {
     const skillsList = useRef<HTMLUListElement | null>(null);
     useLayoutEffect(() => {
     
-        gsap.fromTo('.skills-section', {
+        gsap.fromTo('.skills-header', { 
+            autoAlpha: 0,
+            yPercent: 50
+            }, {
+                duration: 1,
+                autoAlpha: 1,
+                yPercent: 0,
+                ease: 'none',
+                scrollTrigger: {
+                    id: `.skills-section`,
+                    trigger: '.skills-section',
+                    start: 'top center+=100',
+                        end: '+=300',
+                        toggleActions: 'play none none reverse',
+                    }
+            });
+        gsap.fromTo('[class^= "card-"]', {
             autoAlpha: 0
         }, {
             duration: 1,
             autoAlpha: 1,
+            stagger: 0.3,
             ease: 'none',
             scrollTrigger: {
                 id: `.skills-section`,
                 trigger: '.skills-section',
                 start: 'top center+=100',
+                
+                end: '+=300',
                 toggleActions: 'play none none reverse'
             }
         });
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.skills-section',
-    //             start: 'top top',
-    //             // markers: {
-    //             //     startColor: "pink",
-    //             //     endColor: "purple",
-    //             //     fontSize: "18px",
-    //             //     indent: 2
-    //             // },
-    //             end: '+=300',
-    //             pin: true, 
-    //             pinSpacing: false,
-    //             scrub: true,
-    //         },
-    //     });
-    //     tl.from('.skills-section', {
-    //         opacity: 0,
-    //         duration: 1,
-    //         yPercent: 50
-    //     })
-    //     .to('.skills-section', {
-    //         opacity: 1,
-    //         duration: 5,
-    //         y: 0
-    //     })
+       
      });
      
      const Frontend = [
@@ -103,7 +97,7 @@ function Skill() {
 
     return (
         <div className="skills-section">
-            <h1> My Expertise</h1>
+            <h1 className="skills-header"> My Expertise</h1>
             <ul className="card-container" ref={skillsList}>
                 {
                     skills.map((skill, index) => {

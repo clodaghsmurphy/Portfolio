@@ -235,7 +235,7 @@
     .blue-ball {
         z-index: 1;
         filter: blur(100px);
-        position: absolute;
+        position: fixed;
         width: 400px;
         top: 50%;
         left: 50%;
@@ -253,6 +253,7 @@
         margin: 0 auto;
         @media screen and (max-width: $screen-width-sm){
             flex-direction: column;
+            width: 80%;
         }
        justify-content: space-between;
        padding: 0px;

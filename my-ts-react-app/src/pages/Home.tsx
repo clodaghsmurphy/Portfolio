@@ -31,7 +31,7 @@ function Home() {
            },
          });
          tlHome.to('.home-section', {
-                opacity: 0,
+                y: '-100vh',
             })
        const tl = gsap.timeline({
         scrollTrigger: {
@@ -43,16 +43,17 @@ function Home() {
        });
         tl.to(pinkBall, {
             top: '0px',
-            duration: 5,
+            duration: 2,
           })
           .to(pinkBall, {
             right: '50%',
-            duration: 3,
+            duration: 2,
             })
           .to(pinkBall, {
-            scale: 1.3,
-            duration: 3,
+            scale: 2,
+            duration: 8,
             })
+          
           
 
         const tl2 = gsap.timeline({
