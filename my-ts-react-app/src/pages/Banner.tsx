@@ -1,0 +1,21 @@
+import React from 'react';
+import avatar from '../media/avatar.png';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
+import { TypeAnimation} from 'react-type-animation';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
+import Spline from '@splinetool/react-spline';
+
+
+function Banner() {
+    return (
+        <div className='section' id='home'>
+            <Spline scene="https://prod.spline.design/5v34PJfZ1gtHysTc/scene.splinecode" />
+            <div className="container">
+                <div className='title'>Hello, I'm Clodagh, a creative fullstack developer</div>
+            </div>   
+        </div>
+    )
+}
+
+export default Banner;

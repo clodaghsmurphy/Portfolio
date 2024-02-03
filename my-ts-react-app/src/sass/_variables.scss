@@ -1,8 +1,13 @@
 //-------COLORS-------//
-$bg-color: #F3F2F9;
+$bg-color: #091121;
 $font-color: #818183;
-$blue: hsl(207, 77%, 76%);
-$purple: #CDBCE6;
+$blue: #2ba2f7;
+$pink: #ff66fc;
+$light-pink: #fbb6ce;
+$green: #30dbc6;
+$purple: #6b66fc;
+$gradient: linear-gradient(to right, $green, $blue, $pink);
+$gradient2: linear-gradient(to right, $purple, $blue);
 
 $screen-width-sm: 771px;
 $screen-width-xs: 576px;

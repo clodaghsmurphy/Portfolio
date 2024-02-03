@@ -1,26 +1,14 @@
 @import "variables";
-
+@import 'fonts';
 * {
     overflow-x: hidden;
 }
 
 body {
 	background-color: $bg-color;
+    font-family: 'Playfair Display', serif;
     .social-icons {
-            list-style: none;
-            position: fixed;
-            width: 10%;
-            z-index: 9;
-            left  : 0;
-            top: 50%;
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-            @media screen and (max-width: $screen-width-xs) {
-                flex-direction: row;
-                width: 100%;
-                top: 0%;
-            }
+  
             li {
                 margin: 10px;
             }
@@ -29,5 +17,27 @@ body {
                 cursor: pointer;
             }
         }
+
+    .blur-rotate {
+        filter: blur(90px);
+        background-color: #6b66fc69;
+        position: fixed;
+        top:10%;
+        display: block;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        left: 20%;
+        height: 300px;
+        width: 600px;
+        animation: rotate 10s linear infinite;
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }
 

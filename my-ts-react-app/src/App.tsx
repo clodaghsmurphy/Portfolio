@@ -7,19 +7,26 @@ import Skills from './pages/Skills';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import About from './pages/About';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './css/Home.css'; 
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+import Header from './pages/Header';
+import Banner from './pages/Banner';
+import Nav from './pages/Nav';
+import BlurRotate from './components/BlurRotate';
 
 function App() {
    
 
   return (
     <div className="App">
-
-        <SocialIcons/>
-        <Home />
+        < BlurRotate />
+        <Header />
+        <Banner />
+        <Nav />
         <About />
-        <Skills />
+        <Work />
+        <Contact />
     </div>
   );
 }

@@ -1,31 +1,39 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
 * {
   overflow-x: hidden;
 }
 
 body {
-  background-color: #F3F2F9;
-}
-body .social-icons {
-  list-style: none;
-  position: fixed;
-  width: 10%;
-  z-index: 9;
-  left: 0;
-  top: 50%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-@media screen and (max-width: 576px) {
-  body .social-icons {
-    flex-direction: row;
-    width: 100%;
-    top: 0%;
-  }
+  background-color: #091121;
+  font-family: "Playfair Display", serif;
 }
 body .social-icons li {
   margin: 10px;
 }
 body .social-icons img {
   cursor: pointer;
+}
+body .blur-rotate {
+  filter: blur(90px);
+  background-color: rgba(107, 102, 252, 0.4117647059);
+  position: fixed;
+  top: 10%;
+  display: block;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  height: 300px;
+  width: 600px;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=App.css.map */

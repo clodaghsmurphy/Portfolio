@@ -17,45 +17,12 @@ import blueBall from "../media/blue-ball.svg";
 // import settings from "../media/settings.svg";
 // import github from "../media/github.svg";
 // import docker from "../media/docker.svg";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 function Skill() {
     const skillsList = useRef<HTMLUListElement | null>(null);
     useLayoutEffect(() => {
     
-        gsap.fromTo('.skills-header', { 
-            autoAlpha: 0,
-            yPercent: 50
-            }, {
-                duration: 1,
-                autoAlpha: 1,
-                yPercent: 0,
-                ease: 'none',
-                scrollTrigger: {
-                    id: `.skills-section`,
-                    trigger: '.skills-section',
-                    start: 'top center+=100',
-                        end: '+=300',
-                        toggleActions: 'play none none reverse',
-                    }
-            });
-        gsap.fromTo('[class^= "card-"]', {
-            autoAlpha: 0
-        }, {
-            duration: 1,
-            autoAlpha: 1,
-            stagger: 0.3,
-            ease: 'none',
-            scrollTrigger: {
-                id: `.skills-section`,
-                trigger: '.skills-section',
-                start: 'top center+=100',
-                
-                end: '+=300',
-                toggleActions: 'play none none reverse'
-            }
-        });
        
      });
      
