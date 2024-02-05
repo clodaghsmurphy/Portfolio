@@ -13,10 +13,13 @@ const projects = [
         stack: [
             'React',
             'Node.js',
-            'Express',
-            'MongoDB'
+            'NestJS',
+            'PostgreSQL',
+            'Prisma'
         ],
-        img: 'assets/pong.png'
+        img: 'assets/pong.png',
+        alt: 'pong protoype',
+        link: 'https://github.com/clodaghsmurphy/ft_transcendence'
     },
     {
         title: 'LVMH x Data x Design x Tech Academy',
@@ -24,12 +27,12 @@ const projects = [
         In a team of 4, our mission was to create a website in which students could log in using the schools OAuth2 API  \
         and challenge their friends to a game of pong. The site also contained an integrated chatroom in which users could create roles and groups',
         stack: [
-            'React',
-        'Node.js',
-        'Express',
-        'MongoDB'
+        'React',
+        'Tailwind',
         ],
-img: 'assets/lvmh.png'
+        img: 'assets/lvmh.png',
+        alt: 'lvmh protoype',
+        link: 'https://github.com/WalterLuong/LVMHx42'
     }
 ]
 
@@ -37,6 +40,7 @@ img: 'assets/lvmh.png'
 const Projects: React.FC = () => {
   return (
     <div id='projects' className='section'>
+        <h1>My Projects</h1>
         {projects.map((project, index) => {
             return (
                 <div className="container">
@@ -60,7 +64,7 @@ const Projects: React.FC = () => {
                                 })}
                             </ul>
                             <div className="cta">
-                                <button className="btn">View Project</button>
+                                <a href={project.link} className="btn">View Source Code</a>
                             </div>
                         </div>
                     </motion.div>
@@ -71,7 +75,7 @@ const Projects: React.FC = () => {
                         className="right-column">
                         <div className="img-container">
                             <div className="image">
-                                <img src={project.img} alt="project" />
+                                <img src={project.img} alt={project.alt} />
                             </div>
                         </div>
 

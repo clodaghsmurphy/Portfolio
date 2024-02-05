@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
@@ -9,9 +10,16 @@
   padding: 15px;
   justify-content: center;
 }
+@media screen and (max-width: 771px) {
+  .section {
+    margin: 70px 0;
+  }
+}
 
 .btn {
   padding: 10px 12px;
+  text-decoration: none;
+  font-size: 0.8rem;
   background-color: #6b66fc;
   color: white;
   font-weight: bold;
@@ -51,4 +59,18 @@
   box-shadow: 4px 2px 8px 0px rgba(9, 17, 33, 0.5019607843);
   padding: 5px 8px;
   font-size: 0.8rem;
+}
+
+.image {
+  flex: 1 1 0%;
+}
+.image img {
+  max-width: 600px;
+  max-height: 600px;
+}
+@media screen and (max-width: 768px) {
+  .image img {
+    max-width: 400px;
+    max-height: unset;
+  }
 }/*# sourceMappingURL=global.css.map */

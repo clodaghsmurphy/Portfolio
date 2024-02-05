@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @font-face {
   font-family: "Playfair Display";
   src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }
 body {
   background-color: #091121;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 body .social-icons li {

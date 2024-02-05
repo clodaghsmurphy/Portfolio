@@ -25,11 +25,9 @@ function App() {
         < BlurRotate />
         <Header />
         <Banner />
-        <Nav />
         <About />
         <Work />
         <Projects />
-        <Contact />
     </div>
   );
 }

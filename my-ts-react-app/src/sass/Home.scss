@@ -114,9 +114,7 @@
         }
         .image {
             flex: 1 1 0%;
-            @media screen and (max-width: $screen-width-sm) {
-                display: none;
-            }
+            
         }
         img {
             max-width: 600px;
@@ -225,9 +223,7 @@
         .image {
             flex: 1 1 0%;
 
-            @media screen and (max-width: $screen-width-sm) {
-                display: none;
-            }
+           
             img {
                 max-width: 600px;
                 max-height: 600px;
@@ -295,18 +291,8 @@
     }
     
 }
-.image {
-    flex: 1 1 0%;
-    @media screen and (max-width: $screen-width-sm) {
-        display: none;
-    }
-    img {
-        max-width: 600px;
-        max-height: 600px;
-    }
-}
+
 #work {
-    height: unset;
     display: flex;
     color: white;
     justify-content: center;
@@ -349,9 +335,7 @@
                     max-width: 450px;
                     max-height: 450px;
                 }
-                @media screen and (max-width: $screen-width-sm) {
-                    display: none;
-                }
+               
             }
     
         }
@@ -393,8 +377,7 @@
 
 .scroller {
     width: 100%;
-    //max-width: 400px;
-    outline: 3px solid lime;
+   
     .icon {
         display: flex;
         overflow: visible;
@@ -462,7 +445,14 @@
             .timeline-item {
                 display: flex;
                 flex-direction: row;
+                @media screen and (max-width: $screen-width-sm) {
+                    flex-direction: column;
+                    
+                }
                 .timeline-left {
+                    @media screen and (max-width: $screen-width-sm) {
+                           width: 100%;
+                        }
                     width: 70px;
                     display: flex;
                     justify-content: center;
@@ -470,6 +460,9 @@
                     .timeline-year {
                         padding: 5px;
                         writing-mode: vertical-rl;
+                        @media screen and (max-width: $screen-width-sm) {
+                                writing-mode: horizontal-tb;
+                            }
                         font-size: 1.2rem;
                         font-weight: bold;
                         color: rgba(255, 255, 255, 0.562);
@@ -494,6 +487,9 @@
                                 display: flex;
                                 flex-direction: row;
                                 .timeline-bubble {
+                                    @media screen and (max-width: $screen-width-sm) {
+                                            display: none;
+                                        }
                                     display: inline-table;
                                     justify-content: center;
                                     position: relative;
@@ -601,16 +597,27 @@
     gap: 3rem;
     >*:nth-child(2n):not(:first-child) {
             flex-direction: row-reverse;
+            @media screen and (max-width: $screen-width-sm) {
+                    flex-direction: column;
+                }
         }
     .container {
         justify-content: space-between;
         width: 80%;
         align-items: center;
+        @media screen and (max-width: $screen-width-sm) {
+                flex-direction: column;
+            }
         .left-column {
             display: flex;
             flex-direction: column;
             gap: .5rem;
             flex-basis: 41%;
+            @media screen and (max-width: $screen-width-sm) {
+                flex-basis: 100%;
+                justify-content: center;
+                
+            }
             .left-text {
                 .title {
                     font-size: 1rem;
@@ -648,9 +655,7 @@
             }
         }
         .right-column {
-            @media screen and (max-width: $screen-width-sm) {
-                display: none;
-            }
+            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -658,6 +663,10 @@
             img {
                 max-width: 500px;
                 border-radius: 12px;
+                @media screen and (max-width: $screen-width-sm) {
+                   // max-width: 4;
+                    
+                }
 
             }
         }
