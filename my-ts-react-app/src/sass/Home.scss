@@ -334,6 +334,10 @@
                 img {
                     max-width: 450px;
                     max-height: 450px;
+                    @media screen and (max-width: $screen-width-sm) {
+                        max-width: 100%;
+                        max-height: unset;
+                    }
                 }
                
             }
@@ -591,6 +595,7 @@
 #projects {
     display: flex;
     height: unset;
+    overflow-x: hidden;
     color: white;
     flex-direction: column;
     justify-content: center;
@@ -607,12 +612,14 @@
         align-items: center;
         @media screen and (max-width: $screen-width-sm) {
                 flex-direction: column;
+                width: 100%;
             }
         .left-column {
             display: flex;
             flex-direction: column;
             gap: .5rem;
             flex-basis: 41%;
+            width: 100%;
             @media screen and (max-width: $screen-width-sm) {
                 flex-basis: 100%;
                 justify-content: center;
@@ -664,7 +671,7 @@
                 max-width: 500px;
                 border-radius: 12px;
                 @media screen and (max-width: $screen-width-sm) {
-                   // max-width: 4;
+                    max-width: 350px;
                     
                 }
 

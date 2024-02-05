@@ -345,6 +345,12 @@
   max-width: 450px;
   max-height: 450px;
 }
+@media screen and (max-width: 999px) {
+  #work .container .text .image img {
+    max-width: 100%;
+    max-height: unset;
+  }
+}
 #work .container .experience {
   display: flex;
   flex-direction: column;
@@ -572,6 +578,7 @@
 #projects {
   display: flex;
   height: unset;
+  overflow-x: hidden;
   color: white;
   flex-direction: column;
   justify-content: center;
@@ -593,6 +600,7 @@
 @media screen and (max-width: 999px) {
   #projects .container {
     flex-direction: column;
+    width: 100%;
   }
 }
 #projects .container .left-column {
@@ -600,6 +608,7 @@
   flex-direction: column;
   gap: 0.5rem;
   flex-basis: 41%;
+  width: 100%;
 }
 @media screen and (max-width: 999px) {
   #projects .container .left-column {
@@ -646,4 +655,9 @@
 #projects .container .right-column img {
   max-width: 500px;
   border-radius: 12px;
+}
+@media screen and (max-width: 999px) {
+  #projects .container .right-column img {
+    max-width: 350px;
+  }
 }/*# sourceMappingURL=Home.css.map */
