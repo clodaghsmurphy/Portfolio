@@ -32,12 +32,12 @@ function App() {
                 })(window,document,'script','dataLayer','GTM-52JL2F5M');`}
                 </script>
               <noscript>
-                  <iframe
+                 {`<iframe
                       src="https://www.googletagmanager.com/ns.html?id=GTM-52JL2F5M"
                       height="0"
                       width="0"
                       style={{ display: 'none', visibility: 'hidden' }}
-                  />
+                  />`}
               </noscript>
         </Helmet>
         < BlurRotate />
