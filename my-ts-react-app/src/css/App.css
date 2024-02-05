@@ -2,13 +2,10 @@
   font-family: "Playfair Display";
   src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }
-* {
-  overflow-x: hidden;
-}
-
 body {
   background-color: #091121;
   font-family: "Playfair Display", serif;
+  color: white;
 }
 body .social-icons li {
   margin: 10px;

@@ -1,0 +1,79 @@
+@import 'variables.scss';
+@import 'fonts.scss';
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 12px;
+    background-color: $purple;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($purple, 5%);
+    }
+}
+
+// .btn::before {
+//     content: "";
+//     position: absolute;
+//     left: 1px;
+//     right: 1px;
+//     top: 1px;
+//     bottom: 1px;
+//     border-radius: 4px;
+//     background: linear-gradient(to right, #4e4376, #2b5876);
+//     // background: linear-gradient(to right, #4e4376, #2b5876);
+//     z-index: -1;
+//     transition: 200ms
+// }
+
+// .btn::after {
+//     content: attr(data-text);
+//     font-size: 16px;
+//     background: linear-gradient(to left, #00FFA3, #DC1FFF);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     color: white;
+//     transition: 200ms
+// }
+
+
+
+.btn-sm {
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.label {
+        background: linear-gradient(90deg, rgb(34 37 48) 11.4%, rgb(51 53 103) 70.2%);
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 4px 2px 8px 0px #09112180;
+        padding: 5px 8px;
+        font-size: 0.8rem;
+ }

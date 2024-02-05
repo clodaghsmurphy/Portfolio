@@ -1,12 +1,10 @@
 @import "variables";
 @import 'fonts';
-* {
-    overflow-x: hidden;
-}
 
 body {
 	background-color: $bg-color;
     font-family: 'Playfair Display', serif;
+    color: white;
     .social-icons {
   
             li {

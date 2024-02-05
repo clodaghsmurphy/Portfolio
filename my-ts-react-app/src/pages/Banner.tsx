@@ -10,7 +10,6 @@ import Spline from '@splinetool/react-spline';
 function Banner() {
     return (
         <div className='section' id='home'>
-            <Spline scene="https://prod.spline.design/5v34PJfZ1gtHysTc/scene.splinecode" />
             <div className="container">
                 <div className='title'>Hello, I'm Clodagh, a creative fullstack developer</div>
             </div>   

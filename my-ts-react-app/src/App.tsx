@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './avatar.png';
 import './css/App.css';
+import './css/global.css';
 import Home from './pages/Home';
 import SocialIcons from './components/SocialIcons';
 import Skills from './pages/Skills';
@@ -14,6 +15,7 @@ import Header from './pages/Header';
 import Banner from './pages/Banner';
 import Nav from './pages/Nav';
 import BlurRotate from './components/BlurRotate';
+import Projects from './pages/Projects';
 
 function App() {
    
@@ -26,6 +28,7 @@ function App() {
         <Nav />
         <About />
         <Work />
+        <Projects />
         <Contact />
     </div>
   );

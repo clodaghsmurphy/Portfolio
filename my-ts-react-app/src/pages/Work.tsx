@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/variants';
 import avatar from '../media/avatar.png';
+import ExperienceTimeline from '../components/ExperienceTimeline';
 
 function Work() {
 
@@ -30,28 +31,17 @@ function Work() {
                 whileInView={'show'}
                 viewport={{once: false, amount: 0.3}}
                 className="text">
-                    <h1 className='text-gradient'>Work</h1>
-                    <h3>Originally form a a background in marketing I'm a fullstack dveloper with almost a year of experience</h3>
-                    <div className="image">
+                    <h1 >Experience</h1>
+                    <h3>With a degree in Languages and a masters in Global Business form UCD, I started my career in the food industry in marketing. 
+                         In 2021 I enrolled in Ecole 42 in Paris to become a fullstack developer. 
+                         I'm passionate about using effective design and problem solving to create user-friendly experiences.
+                         </h3>
+                    {/* <div className="image">
                         <img src={avatar} alt="avatar" />
-                    </div>
+                    </div> */}
                 </motion.div>
                 <div className="experience">
-                    <div className="experience-container">
-                        {experience.map((item, index) => (
-                            <motion.div 
-                            variants={fadeIn('left', 0.3)}
-                            initial="hidden"
-                            whileInView={'show'}
-                            viewport={{once: false, amount: 0.3}}
-                            className="experience-item" key={index}>
-                                <h3 className='experience-title'>{item.name}</h3>
-                                <h4>{item.jobTitle}</h4>
-                                <p>{item.dateStart} - {item.dateEnd}</p>
-                                <p>{item.description}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <ExperienceTimeline />
                 </div>
             </div>
         </div>
