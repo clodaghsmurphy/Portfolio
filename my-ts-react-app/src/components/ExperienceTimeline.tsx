@@ -6,7 +6,7 @@ import { fadeIn } from '../utils/variants';
 const ExperienceTimeline = () => {
     const experience = [
         {
-            year: '2021 - 2024',
+            year: 'May 2023 - Jan 2024',
             items: [
                 {
                     title: 'Fullstack Developer',
@@ -18,7 +18,8 @@ const ExperienceTimeline = () => {
                         'PHP',
                         'SQL',
                         'Jquery',
-                    ]
+                    ],
+                    description: 'This was my first fullstack position working PHP, SQL, Sass and Jquery with the framework Prestashop.During my time here I had the opportunity to undertake projects such as designing and localising their website for the Irish market, creating a new accessory cross selling module, integrating Apple sso and more. ',
                 },
                 // {
                 //     title: ' Digital Technologies Architect',
@@ -44,12 +45,13 @@ const ExperienceTimeline = () => {
                     title: 'Assistant Marketing Executive France, Belgium & Luxembourg',
                     company: 'Bord Bia',
                     companyLink: 'https://www.bordbia.ie/',
-                    type: 'work',
+                    type: 'marketing',
                     skills: [
                         'Marketing',
                         'Sales',
                         'Communication'
-                    ]
+                    ],
+                    description: 'My first professional experience was in marketing working for the Irish Food Board marketing meat exports to France, Belgium and Luxembourg. Here I was able to gain experience in both operational and digital marketing and gain an in-depth understanding of the food industry.',
                 },
             ]
         },

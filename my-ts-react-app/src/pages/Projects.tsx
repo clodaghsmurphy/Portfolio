@@ -23,9 +23,7 @@ const projects = [
     },
     {
         title: 'LVMH x Data x Design x Tech Academy',
-        description: 'My first fullstack project as a part of my studies at École 42. \
-        In a team of 4, our mission was to create a website in which students could log in using the schools OAuth2 API  \
-        and challenge their friends to a game of pong. The site also contained an integrated chatroom in which users could create roles and groups',
+        description: 'As a part of the LVMH x Data x Design x Tech Academy organised by Haigo, I colloborated students from HEC and Strate to create a web application for LVMH to improve their in store customer experience.  Our solution? A virtual queue system for Louis Vuitton customers to offer them tailored luxury experiences in the area calculated from their estimated waiting time. We managed to design and code our prototype in under a week using React and Tailwind. ',
         stack: [
         'React',
         'Tailwind',

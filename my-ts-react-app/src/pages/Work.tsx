@@ -34,11 +34,8 @@ function Work() {
                     <h1 >Experience</h1>
                     <h3>With a degree in Languages and a masters in Global Business form UCD, I started my career in the food industry in marketing. 
                          In 2021 I enrolled in Ecole 42 in Paris to become a fullstack developer. 
-                         I'm passionate about using effective design and problem solving to create user-friendly experiences.
+                         Since then I've been able to gain experience in the domaine discovering my passion for coding and design.
                          </h3>
-                    {/* <div className="image">
-                        <img src={avatar} alt="avatar" />
-                    </div> */}
                 </motion.div>
                 <div className="experience">
                     <ExperienceTimeline />

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCode } from 'react-icons/fa';
-import { MdOutlineSchool } from "react-icons/md";
+import { MdAutoGraph } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 
@@ -10,6 +10,7 @@ interface TimelineContentProps {
         company: string;
         type: string;
         companyLink: string;
+        description: string;
 }
 
 const TimelineContent = (props: TimelineContentProps) => {
@@ -24,14 +25,14 @@ const TimelineContent = (props: TimelineContentProps) => {
                 <div className="content-left">
                     <div className="timeline-bubble">
                         <div className={props.type === 'work' ?  'bubble-work': 'bubble-education'}>
-                            {props.type === 'work' ? <FaCode /> : <MdOutlineSchool />}
+                            {props.type === 'work' ? <FaCode /> : <MdAutoGraph />}
                         </div>
                     </div>
                     <div className="timeline-text">
                         <div className='timeline-title'>{props.title}</div>
-                        <a className='company-link' href={props.companyLink}>{props.company}</a>
+                        <a className='company-link label' href={props.companyLink}>{props.company}</a>
                         <p className="job-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam non autem reiciendis quos porro, cumque in totam. Maxime accusantium fuga, corrupti quibusdam fugit, ad omnis doloribus minus quam natus sunt.
+                            {props.description}
                         </p>
                         <ul className='timeline-description'>
                             {props.skills?.map((skill, index) => {

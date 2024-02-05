@@ -529,7 +529,8 @@
   font-weight: bold;
 }
 .experience-timeline .timeline-container .timeline .timeline-item .timeline-right .timeline-content li .content-left .timeline-text .company-link {
-  font-weight: lighter;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none;
   color: white;
   font-size: 0.8rem;
