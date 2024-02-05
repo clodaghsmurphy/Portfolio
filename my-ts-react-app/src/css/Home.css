@@ -238,6 +238,12 @@
   max-width: 600px;
   max-height: 600px;
 }
+@media screen and (max-width: 999px) {
+  #about .container .image img {
+    max-width: 100%;
+    max-height: unset;
+  }
+}
 #about .container .text {
   flex: 1 1 0%;
   overflow: visible;

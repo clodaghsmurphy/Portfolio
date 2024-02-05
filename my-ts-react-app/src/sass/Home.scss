@@ -227,6 +227,11 @@
             img {
                 max-width: 600px;
                 max-height: 600px;
+                @media screen and (max-width: $screen-width-sm) {
+                    max-width: 100%;
+                    max-height: unset;
+                    
+                }
             }
         }
 
