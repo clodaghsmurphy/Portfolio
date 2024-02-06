@@ -8,7 +8,7 @@
 }
 .header-section .header-left {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .header-section .header-left .logo {
