@@ -6,13 +6,11 @@ const Three = () => {
     
     return (
         <Canvas>
-            
-            <mesh position={[0, 2, 0]}>
-                <directionalLight position={[-4, 2, 6]}/>
-                <ambientLight intensity={0.3}/>
-                <boxGeometry/>
-                <meshStandardMaterial color='#6b66fc' />
-            </mesh>
+            <pointLight intensity={1.0} position={[-1, 2, 2]} />
+            <pointLight intensity={1.0} position={[0, 1, 3]} />
+            <pointLight intensity={1.0} position={[0, -1, 3]} />
+            <ambientLight intensity={0.6} />
+            <Sphere />
         </Canvas>
     )
 }

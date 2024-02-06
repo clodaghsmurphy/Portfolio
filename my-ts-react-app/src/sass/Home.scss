@@ -39,19 +39,31 @@
     display: flex;
     flex-direction: row;
     overflow: visible;
-    bottom: 10px;
-    left: 50%;
+    z-index: 999;
+    @media screen and (max-width: $screen-width-sm) {
+        bottom: 0;
+        left: 50%;
+    }
+    right: 0;
+    bottom: 0;
     transform: translate(-50%, -50%);
     padding: 8px;
-        border-radius: 20px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
     .nav-container {
         display: flex;
+        color: white;
+        flex-direction: column;
+    @media screen and (max-width: $screen-width-sm) {
         flex-direction: row;
+    }
+        gap: 1rem;
         justify-content: space-between;
+        a {
+            svg {
+                width: 40px;
+                height: 40px;
+                color: white;
+            }
+        }
         .active {
             background-color: rgb(0 0 0 / 40%);
             box-shadow: rgba(207, 205, 205, 0.24) 0px 3px 6px;

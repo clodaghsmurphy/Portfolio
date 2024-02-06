@@ -40,6 +40,7 @@ function App() {
                   />`}
               </noscript>
         </Helmet>
+        <Nav />
         < BlurRotate />
         <Header />
         <Banner />
