@@ -88,14 +88,10 @@
   height: 32px;
 }
 
-#home .section {
-  height: 78vh;
+#home.section {
+  height: 100vh;
 }
-@media screen and (max-width: 999px) {
-  #home .section {
-    height: 85h;
-  }
-}
+
 #home .container {
   width: unset;
   display: flex;

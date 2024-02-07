@@ -84,16 +84,11 @@
             }
     }
 }
+#home.section{
+    height: 100vh;
+}
 
 #home {
-    .section {
-        @media screen and (max-width: $screen-width-sm) {
-            height: 85h;
-        }
-        height: 78vh;
-        
-    }
-
         .container {
             width: unset;
             display: flex;

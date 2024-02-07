@@ -4,12 +4,12 @@
   src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }
 .section {
-  height: 100vh;
   display: flex;
   align-items: center;
   padding: 15px;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 8rem;
 }
 
 .btn {
