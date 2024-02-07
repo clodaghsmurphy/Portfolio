@@ -64,10 +64,10 @@ const ExperienceTimeline = () => {
                     {experience.map((item, index) => {
                         return (
                             <motion.div 
-                            variants={fadeIn('up', 0.3)}
+                            variants={fadeIn('up', 0.1)}
                             initial="hidden"
                             whileInView={'show'}
-                            viewport={{once: false, amount: 0.3}}
+                            viewport={{once: false, amount: 0.1}}
                             className='timeline-item'>
                                 <div className='timeline-left'>
                                     <div className='timeline-year'>{item.year}</div>

@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
                     <motion.div
                         initial="hidden"
                         whileInView={'show'}
-                        variants={fadeIn('right', 0.3)}
+                        variants={fadeIn('right', 0.1)}
                         className="left-column">
                         <div className="left-text">
                             <div className="title">
@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
                     <motion.div
                         initial="hidden"
                         whileInView={'show'}
-                        variants={fadeIn('left', 0.3)}
+                        variants={fadeIn('left', 0.1)}
                         className="right-column">
                         <div className="img-container">
                             <div className="image">

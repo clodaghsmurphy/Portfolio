@@ -17,10 +17,10 @@ const TimelineContent = (props: TimelineContentProps) => {
     return (
         <>
             <motion.li
-                variants={fadeIn('left', 0.3)}
+                variants={fadeIn('left', 0.1)}
                 initial="hidden"
                 whileInView={'show'}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.1}}
             >
                 <div className="content-left">
                     <div className="timeline-bubble">

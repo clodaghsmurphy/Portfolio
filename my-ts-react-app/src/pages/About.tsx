@@ -13,13 +13,13 @@ function About() {
     <div className="section" id="about">
         <div className="container">
             <motion.div 
-            variants={fadeIn('right', 0.3)}
+            variants={fadeIn('right', 0.1)}
             initial="hidden"
             whileInView={'show'}
             className="text">
                 <h1 className='header-title'>About</h1>
                 <motion.p
-                variants={fadeIn('right', 0.5)}
+                variants={fadeIn('right', 0.2)}
                 initial="hidden"
                 whileInView={'show'}>
                       Orginally from a background in marketing, in 2021 I decided to make a career change and become a fullstack developer by enrolling in <a href='https://42.fr/'>École 42</a> in Paris. 
@@ -32,7 +32,7 @@ function About() {
                
             </motion.div>
             <motion.div 
-            variants={fadeIn('left', 0.4)}
+            variants={fadeIn('left', 0.2)}
             initial="hidden"
             whileInView={'show'}
             className="image">

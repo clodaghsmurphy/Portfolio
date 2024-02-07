@@ -26,10 +26,10 @@ function Work() {
         <div className='section' id='work'> 
             <div className="container">
                 <motion.div 
-                variants={fadeIn('right', 0.3)}
+                variants={fadeIn('right', 0.1)}
                 initial="hidden"
                 whileInView={'show'}
-                viewport={{once: false, amount: 0.3}}
+                viewport={{once: false, amount: 0.1}}
                 className="text">
                     <h1 >Experience</h1>
                     <h3>With a degree in Languages and a masters in Global Business form UCD, I started my career in the food industry in marketing. 
