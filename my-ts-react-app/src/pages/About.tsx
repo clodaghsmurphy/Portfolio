@@ -22,7 +22,7 @@ function About() {
                 variants={fadeIn('right', 0.5)}
                 initial="hidden"
                 whileInView={'show'}>
-                      Orginally from a background in marketing, in 2021 I deiced to make a career change and become a fullstack developer by enrolling in <a href='https://42.fr/'>École 42</a> in Paris. 
+                      Orginally from a background in marketing, in 2021 I decided to make a career change and become a fullstack developer by enrolling in <a href='https://42.fr/'>École 42</a> in Paris. 
                     I'm passionate about using effective design and problem solving to create user-friendly experiences. I'm currently based in Paris and I'm open to new opportunities. 
                 </motion.p>
                 <div className="icon-container"

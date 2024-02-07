@@ -37,6 +37,7 @@
 
 .nav {
   position: fixed;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   overflow: visible;
@@ -633,6 +634,7 @@
 @media screen and (max-width: 999px) {
   #projects .container .left-column {
     flex-basis: 100%;
+    width: 90%;
     justify-content: center;
   }
 }
@@ -660,6 +662,7 @@
 }
 #projects .container .left-column .stack ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   gap: 1rem;
