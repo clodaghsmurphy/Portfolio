@@ -11,7 +11,7 @@ const ExperienceTimeline = () => {
                 {
                     title: 'Fullstack Developer React/NodeJS',
                     company: 'Trace For Good',
-                    companyLink: 'https://www.certideal.com/',
+                    companyLink: 'https://www.traceforgood.com/',
                     type: 'work',
                     skills: [
                         'React',
