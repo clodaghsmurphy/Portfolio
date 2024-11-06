@@ -6,10 +6,31 @@ import { fadeIn } from '../utils/variants';
 const ExperienceTimeline = () => {
     const experience = [
         {
+            year: 'February 2024 - Present',
+            items: [
+                {
+                    title: 'Fullstack Developer React/NodeJS',
+                    company: 'Trace For Good',
+                    companyLink: 'https://www.certideal.com/',
+                    type: 'work',
+                    skills: [
+                        'React',
+                        'NodeJs',
+                        'Postgres SQL',
+                        'Typescript',
+                        'Google Cloud',
+                        'Storybook',
+                        'Docker'
+                    ],
+                    description: 'This was my first full-stack position working with React, TypeScript, Node.js, and Google Cloud. During my time here, I undertook projects such as designing and implementing new admin features, optimizing the platform for better performance, and establishing a design system using Storybook for a consistent UI/UX. This role allowed me to gain valuable experience in building scalable, user-focused solutions in a fast-paced startup environment.',
+                },
+            ]
+        },
+        {
             year: 'May 2023 - Jan 2024',
             items: [
                 {
-                    title: 'Fullstack Developer',
+                    title: 'Fullstack Developer PHP/Prestashop',
                     company: 'Certideal',
                     companyLink: 'https://www.certideal.com/',
                     type: 'work',
@@ -21,20 +42,6 @@ const ExperienceTimeline = () => {
                     ],
                     description: 'This was my first fullstack position working PHP, SQL, Sass and Jquery with the framework Prestashop.During my time here I had the opportunity to undertake projects such as designing and localising their website for the Irish market, creating a new accessory cross selling module, integrating Apple sso and more. ',
                 },
-                // {
-                //     title: ' Digital Technologies Architect',
-                //     company: 'École 42',
-                //     companyLink: 'https://42.fr',
-                //     type: 'eduucation',
-                //     skills: [
-                //         'C',
-                //         'C++',
-                //         'React',
-                //         'NodeJs',
-                //     ]
-                // }
-              
-
             ]
         }, 
         {
