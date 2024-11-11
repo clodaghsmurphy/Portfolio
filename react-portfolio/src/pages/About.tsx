@@ -1,6 +1,3 @@
-import React from "react";
-import { useLayoutEffect } from "react";
-
 import avatar from "../media/avatar-purple.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";

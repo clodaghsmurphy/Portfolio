@@ -1,17 +1,8 @@
-import React from 'react';
-import logo from './avatar.png';
-import './css/App.css';
-import './css/global.css';
-import Home from './pages/Home';
-import SocialIcons from './components/SocialIcons';
-import Skills from './pages/Skills';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import './sass/App.scss';
+import './sass/global.scss';
 import About from './pages/About';
-import './css/Home.css'; 
+import './sass/Home.scss';
 import Work from './pages/Work';
-import Contact from './pages/Contact';
-import Header from './pages/Header';
 import Banner from './pages/Banner';
 import Nav from './pages/Nav';
 import BlurRotate from './components/BlurRotate';
@@ -42,7 +33,6 @@ function App() {
         </Helmet>
         <Nav />
         < BlurRotate />
-        <Header />
         <Banner />
         <About />
         <Work />

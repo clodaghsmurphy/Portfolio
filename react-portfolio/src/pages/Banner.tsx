@@ -1,10 +1,3 @@
-import React from 'react';
-import avatar from '../media/avatar.png';
-import { FaGithub, FaLinkedin} from 'react-icons/fa';
-import { TypeAnimation} from 'react-type-animation';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/variants';
-import Spline from '@splinetool/react-spline';
 import Three from '../components/Three';
 
 

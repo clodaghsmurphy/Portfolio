@@ -1,13 +1,10 @@
-import three from 'three';
-import { Canvas } from '@react-three/fiber';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import { Mesh } from 'three';
-import { OrbitControls } from '@react-three/drei';
 
 const Sphere = () => {
     const myMesh = useRef<THREE.Mesh | null>(null)
     useFrame((state, delta) => {
+        state
         myMesh.current!.rotation.y += delta / 2
         myMesh.current!.rotation.x += delta / 2
     })

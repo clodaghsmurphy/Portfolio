@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCode } from 'react-icons/fa';
 import { MdAutoGraph } from "react-icons/md";
 import { motion } from "framer-motion";

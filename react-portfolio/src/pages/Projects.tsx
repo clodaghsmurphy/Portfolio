@@ -1,9 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/variants';
-import pong from '/pong.png';
-import lvmh from '/lvmh.png';
-
 const projects = [
     {
         title : 'Transcendence',
@@ -41,7 +38,7 @@ const Projects: React.FC = () => {
         <h1>My Projects</h1>
         {projects.map((project, index) => {
             return (
-                <div className="container">
+                <div className="container" key={index}>
                     <motion.div
                         initial="hidden"
                         whileInView={'show'}

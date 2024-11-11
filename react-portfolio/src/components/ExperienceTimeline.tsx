@@ -1,4 +1,3 @@
-import React from 'react';
 import TimelineContent from './TimelineContent';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/variants';
@@ -75,6 +74,7 @@ const ExperienceTimeline = () => {
                             initial="hidden"
                             whileInView={'show'}
                             viewport={{once: false, amount: 0.1}}
+                            key={index}
                             className='timeline-item'>
                                 <div className='timeline-left'>
                                     <div className='timeline-year'>{item.year}</div>
@@ -83,7 +83,7 @@ const ExperienceTimeline = () => {
                                     <ul className='timeline-content'>
                                 {item.items.map((item, index) => {
                                     return (
-                                         <TimelineContent {...item} /> 
+                                         <TimelineContent {...item} key={index}/>
 
                                     )
                                 })}

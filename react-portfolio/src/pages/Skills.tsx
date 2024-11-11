@@ -1,22 +1,5 @@
-import React from "react";
 import { useLayoutEffect, useRef } from "react";
 import blueBall from "../media/blue-ball.svg";
-// import codeIcon from "../media/code.svg";
-// import html from "../media/html.svg";
-// import css from "../media/css.svg";
-// import js from "../media/javascript.svg";
-// import typescript from "../media/typescript.svg";
-// import c from "../media/c.svg";
-// import cpp from "../media/c++.svg";
-// import python from "../media/python.svg";
-// import php from "../media/php.svg";
-// import nodejs from "../media/nodejs.svg";
-// import sass from "../media/sass.svg";
-// import react from "../media/react.svg";
-// import database from "../media/database.svg";
-// import settings from "../media/settings.svg";
-// import github from "../media/github.svg";
-// import docker from "../media/docker.svg";
 
 
 function Skill() {

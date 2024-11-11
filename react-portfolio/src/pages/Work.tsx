@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/variants';
-import avatar from '../media/avatar.png';
 import ExperienceTimeline from '../components/ExperienceTimeline';
 
 function Work() {
